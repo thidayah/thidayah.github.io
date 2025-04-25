@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Taufik Hidayah
 
-My main focus right now is as a Frontend Web and Mobile Developer. With more than 5 years of experience building web and mobile applications, I am used to creating fast, responsive, user-friendly, comfortable to use, and performance-efficient.
+My main focus right now is as a **Frontend Web** and **Mobile Developer**. With more than 5 years of experience building web and mobile applications, I am used to creating fast, responsive, user-friendly, comfortable to use, and performance-efficient.
 
 ## 🌐 Live Portfolio
 👉 [Jump!!](https://thidayah.github.io)
