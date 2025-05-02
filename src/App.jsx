@@ -74,6 +74,38 @@ function App() {
               <br />
               My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
             </p>
+
+            <div className=" text-3xl font-bold text-white mt-12">What I'm Doing</div>
+            <div className=" grid grid-cols-2 gap-6 mt-8">
+              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
+                <div className=" size-8"></div>
+                <div>
+                  <div className="text-[#fafafa] font-bold text-xl">Web Design</div>
+                  <div className="text-[#d6d6d6] text-lg mt-2">The most modern and high-quality design made at a professional level.</div>
+                </div>
+              </div>
+              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
+                <div className=" size-8"></div>
+                <div>
+                  <div className="text-[#fafafa] font-bold text-xl">Web Development</div>
+                  <div className="text-[#d6d6d6] text-lg mt-2">High-quality development of sites at the professional level.</div>
+                </div>
+              </div>
+              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
+                <div className=" size-8"></div>
+                <div>
+                  <div className="text-[#fafafa] font-bold text-xl">Mobile Apps</div>
+                  <div className="text-[#d6d6d6] text-lg mt-2">Professional development of applications for iOS and Android.</div>
+                </div>
+              </div>
+              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
+                <div className=" size-8"></div>
+                <div>
+                  <div className="text-[#fafafa] font-bold text-xl">Photography</div>
+                  <div className="text-[#d6d6d6] text-lg mt-2">I make high-quality photos of any category at a professional level.</div>
+                </div>
+              </div>
+            </div>
           </div>
 
          
