@@ -3,6 +3,10 @@ import { useState } from 'react'
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import { FiLinkedin, FiMail, FiMapPin, FiUser } from "react-icons/fi";
+import iconApp from './assets/icon-app.svg'
+import iconDev from './assets/icon-dev.svg'
+import iconDesign from './assets/icon-design.svg'
+import iconPhoto from './assets/icon-photo.svg'
 
 function App() {
   return (
@@ -41,7 +45,7 @@ function App() {
               </div>
               <div className="flex flex-col">
                 <div className="text-[#9f9f9f] uppercase text-sm">Email</div>
-                <div className="text-white">thidayaaah@gmail.com</div>
+                <a className="text-white hover:cursor-pointer" href="mailto:thidayaaah@gmail.com">thidayaaah@gmail.com</a>
               </div>
             </div>
             <div className="flex flex-row space-x-4 items-center">
@@ -50,7 +54,7 @@ function App() {
               </div>
               <div className="flex flex-col">
                 <div className="text-[#9f9f9f] uppercase text-sm">LinkedIn</div>
-                <div className="text-white">@thidayah</div>
+                <a className="text-white hover:cursor-pointer" target="_blank" href="https://www.linkedin.com/in/thidayah/">@thidayah</a>
               </div>
             </div>
           </div>
@@ -77,34 +81,34 @@ function App() {
 
             <div className=" text-3xl font-bold text-white mt-12">What I'm Doing</div>
             <div className=" grid grid-cols-2 gap-6 mt-8">
-              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
-                <div className=" size-8"></div>
+              {/* <div className=" flex flex-row space-x-6 bg-[#222224] rounded-2xl p-8 shadow shadow-[#ffffff]">
+                <img src={iconDesign} className="size-10" />
                 <div>
                   <div className="text-[#fafafa] font-bold text-xl">Web Design</div>
                   <div className="text-[#d6d6d6] text-lg mt-2">The most modern and high-quality design made at a professional level.</div>
                 </div>
-              </div>
-              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
-                <div className=" size-8"></div>
+              </div> */}
+              <div className=" flex flex-row space-x-6 bg-[#222224] rounded-2xl p-8 shadow shadow-[#ffffff]">
+                <img src={iconDev} className="size-10" />
                 <div>
                   <div className="text-[#fafafa] font-bold text-xl">Web Development</div>
                   <div className="text-[#d6d6d6] text-lg mt-2">High-quality development of sites at the professional level.</div>
                 </div>
               </div>
-              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
-                <div className=" size-8"></div>
+              <div className=" flex flex-row space-x-6 bg-[#222224] rounded-2xl p-8 shadow shadow-[#ffffff]">
+                <img src={iconApp} className="size-10" />
                 <div>
                   <div className="text-[#fafafa] font-bold text-xl">Mobile Apps</div>
                   <div className="text-[#d6d6d6] text-lg mt-2">Professional development of applications for iOS and Android.</div>
                 </div>
               </div>
-              <div className=" flex flex-row space-x-4 bg-[#222224] rounded-2xl p-8 shadow-xs shadow-[#ffdb70]">
-                <div className=" size-8"></div>
+              {/* <div className=" flex flex-row space-x-6 bg-[#222224] rounded-2xl p-8 shadow shadow-[#ffffff]">
+                <img src={iconPhoto} className="size-10" />
                 <div>
                   <div className="text-[#fafafa] font-bold text-xl">Photography</div>
                   <div className="text-[#d6d6d6] text-lg mt-2">I make high-quality photos of any category at a professional level.</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
