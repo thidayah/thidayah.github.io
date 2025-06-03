@@ -189,15 +189,15 @@ const Portofolio = () => {
 
       <div className=" mt-8 grid grid-cols-3 gap-8">
         {(filterGroup !== '' ? projects.filter(f => f.type === filterGroup) : projects).map((row) => (
-          <div >
+          <a href={row?.url} target={`${row?.url !== '#' ? '_blank' : '_top'}`} className={` cursor-pointer`} >
             <img
-              className=" rounded-xl transition-all hover:scale-125 duration-300"
+              className=" rounded-xl transition-all hover:scale-125 duration-300 hover:cursor-zoom-in"
               src={row?.image}
               alt={row?.name}
             />
             <div className="text-[#fafafa] text-xl font-medium mt-2 ml-2">{row?.name}</div>
             <div className="text-[#9f9f9f] text-lg ml-2">{row?.type}</div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
