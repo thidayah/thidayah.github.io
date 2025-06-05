@@ -181,15 +181,26 @@ const Portofolio = () => {
 
   return (
     <div className=" mt-8">
-      <div className="flex flex-row space-x-8 text-xl text-[#d6d6d6]">
+      <div className=" md:hidden border border-[#383838] rounded-2xl pr-4">
+        <select 
+          className=" w-full p-4 text-white focus:outline-none"
+          onChange={(e) => setFilterGroup(e?.target?.value)}
+        >
+          <option value={''}>All</option>
+          <option value={'Web Development'}>Web Development</option>
+          <option value={'Applications'}>Applications</option>
+        </select>
+      </div>
+      <div className=" hidden md:flex flex-row space-x-8 md:text-xl text-[#d6d6d6]">
         <div className={` ${filterGroup === '' ? 'text-[#fcd16b]' : ''} cursor-pointer`} onClick={() => setFilterGroup('')}>All</div>
         <div className={` ${filterGroup === 'Web Development' ? 'text-[#fcd16b]' : ''} cursor-pointer`} onClick={() => setFilterGroup('Web Development')}>Web Development</div>
         <div className={` ${filterGroup === 'Applications' ? 'text-[#fcd16b]' : ''} cursor-pointer`} onClick={() => setFilterGroup('Applications')}>Applications</div>
       </div>
-
-      <div className=" mt-8 grid grid-cols-3 gap-8">
+      <div className=" mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {(filterGroup !== '' ? projects.filter(f => f.type === filterGroup) : projects).map((row) => (
-          <a href={row?.url} target={`${row?.url !== '#' ? '_blank' : '_top'}`} className={` cursor-pointer`} >
+          <a key={row?.id} href={row?.url} target={`${row?.url !== '#' ? '_blank' : '_top'}`} className={` cursor-pointer`} >
+            {/* <div className=" animate-pulse w-full h-40 bg-[#fcd16b] rounded-xl">
+            </div>             */}
             <img
               className=" rounded-xl transition-all hover:scale-125 duration-300 hover:cursor-zoom-in"
               src={row?.image}
