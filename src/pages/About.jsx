@@ -177,7 +177,7 @@ const About = () => {
   return (
     <>
       <p className="text-[#d6d6d6] md:text-xl mt-4 md:mt-8">
-        My main focus right now is as a <b className="text-[#fcd16b]">Frontend Web</b> and <b className="text-[#fcd16b]">Mobile Developer</b>. With more than 5 years of experience building web and mobile applications, I am used to creating fast, responsive, user-friendly, comfortable to use, and performance-efficient.
+        My main focus right now is as a <b className="text-[#fcd16b]">Senior Frontend Developer</b>. With more than 5 years of experience building web and mobile applications, I am used to creating fast, responsive, user-friendly, comfortable to use, and performance-efficient.
         <br />
         <br />
         I regularly collaborate with cross-functional teams such as Backend and UI/UX to deliver optimal user experiences. In every project, I always prioritize clean code, reusability, and performance. With a combination of technical skills and a strong passion for continuous learning, I’m ready to be part of your team and contribute to building impactful digital products.
