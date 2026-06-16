@@ -1,14 +1,29 @@
-import React from 'react'
-import { FiArrowRight, FiDownload, FiExternalLink, FiMail } from 'react-icons/fi'
+import React, { useState } from 'react'
+import { FiArrowRight, FiDownload, FiExternalLink, FiMail, FiLinkedin } from 'react-icons/fi'
 import { FaGithub } from 'react-icons/fa'
-import { FiLinkedin } from 'react-icons/fi'
 
+import cvFile from '../assets/CV_Taufik_Hidayah.pdf'
 import imagePaseeroWeb from '../assets/PaseeroWeb.webp'
+import imagePaseeroMobile from '../assets/PaseeroMobile.webp'
 import imageKlaklik from '../assets/Klaklik.webp'
 import imageRuangPasar from '../assets/RuangPasar.webp'
 import imageYubiChat from '../assets/YubiChat.webp'
 import imageEzrx from '../assets/Ezrx.webp'
+import imageEzview from '../assets/Ezview.webp'
 import imageDailyTax from '../assets/DailyTax.webp'
+import imageHRDMobile from '../assets/HRDMobile.webp'
+import imageCityTours from '../assets/CityTours.webp'
+import imagePrivilegez from '../assets/Privilegez.webp'
+import imageSIL from '../assets/SIL.webp'
+import imageCiptaKarya from '../assets/CiptaKarya.webp'
+import imageBMBK from '../assets/BMBK.webp'
+import imageEMA from '../assets/EMA.webp'
+import imageTourizpass from '../assets/Tourizpass.webp'
+import imageEdot from '../assets/Edot.webp'
+import imageLNG from '../assets/LNG.webp'
+import imageKNS from '../assets/KNS.webp'
+import imageNex from '../assets/Nex.webp'
+import imageBearny from '../assets/Bearny.webp'
 
 const STATS = [
   { value: '6+', label: 'Years Experience' },
@@ -37,12 +52,12 @@ const SELECTED_PROJECTS = [
   },
   {
     id: 3,
-    name: 'Ruang Pasar',
-    category: 'Agricultural E-commerce',
-    description: 'Marketplace for agricultural products with payment gateway integration and merchant management workflows.',
-    stack: ['Laravel', 'RESTful APIs', 'Midtrans', 'Xendit'],
-    image: imageRuangPasar,
-    url: null,
+    name: 'Ezrx',
+    category: 'Healthcare Platform',
+    description: 'Healthcare platform for medical professionals with responsive interface, secure data handling, and integrated backend services.',
+    stack: ['React.js', 'TypeScript', 'RESTful APIs'],
+    image: imageEzrx,
+    url: 'https://ezrx.id/',
   },
   {
     id: 4,
@@ -55,20 +70,155 @@ const SELECTED_PROJECTS = [
   },
   {
     id: 5,
-    name: 'Ezrx',
-    category: 'Healthcare Platform',
-    description: 'Healthcare platform for medical professionals with responsive interface, secure data handling, and integrated backend services.',
-    stack: ['React.js', 'TypeScript', 'RESTful APIs'],
-    image: imageEzrx,
-    url: 'https://ezrx.id/',
-  },
-  {
-    id: 6,
     name: 'Daily Tax',
     category: 'Enterprise Tax Management',
     description: 'Tax management platform with accounting modules, reporting workflows, and downloadable business reports for enterprise use.',
     stack: ['React.js', 'RESTful APIs'],
     image: imageDailyTax,
+    url: null,
+  },
+  {
+    id: 6,
+    name: 'KNS',
+    category: 'Corporate Web Platform',
+    description: 'Corporate web platform with product catalog, multilingual content management, and company profile for a regional business.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageKNS,
+    url: 'https://kns.asia/',
+  },
+  {
+    id: 7,
+    name: 'Paseero Mobile',
+    category: 'Marketplace Mobile App',
+    description: 'Cross-platform mobile companion to the Paseero marketplace, featuring real-time auction bidding and push notifications.',
+    stack: ['React Native', 'Redux', 'Paystack'],
+    image: imagePaseeroMobile,
+    url: 'https://play.google.com/store/apps/details?id=com.paseerorn',
+  },
+  {
+    id: 8,
+    name: 'CityTours',
+    category: 'Travel & Tourism Platform',
+    description: 'Travel booking platform for city tours with itinerary management, booking flows, and payment integration.',
+    stack: ['Vue.js', 'RESTful APIs'],
+    image: imageCityTours,
+    url: 'https://m.citytours.sg/',
+  },
+  {
+    id: 9,
+    name: 'Ezview',
+    category: 'Healthcare Platform',
+    description: 'Medical data viewing platform for healthcare professionals with secure document handling and role-based access control.',
+    stack: ['React.js', 'TypeScript', 'RESTful APIs'],
+    image: imageEzview,
+    url: 'https://ezview.id/',
+  },
+  {
+    id: 10,
+    name: 'Ruang Pasar',
+    category: 'Agricultural E-commerce',
+    description: 'Marketplace for agricultural products with payment gateway integration and merchant management workflows.',
+    stack: ['Laravel', 'RESTful APIs', 'Midtrans', 'Xendit'],
+    image: imageRuangPasar,
+    url: null,
+  },
+  {
+    id: 11,
+    name: 'LNG',
+    category: 'Energy Industry Platform',
+    description: 'Web platform for an LNG company featuring operational data management, reporting, and stakeholder communication tools.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageLNG,
+    url: 'https://dev.indolng.co.id/',
+  },
+  {
+    id: 12,
+    name: 'HRD Mobile',
+    category: 'HR Management App',
+    description: 'Mobile HR app for employee attendance, leave requests, and payroll tracking across multiple company branches.',
+    stack: ['React Native', 'Redux', 'RESTful APIs'],
+    image: imageHRDMobile,
+    url: null,
+  },
+  {
+    id: 13,
+    name: 'Tourizpass',
+    category: 'Tourism Platform',
+    description: 'Tourism pass platform for managing attraction access, digital ticketing, and visitor analytics.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageTourizpass,
+    url: null,
+  },
+  {
+    id: 14,
+    name: 'eDot',
+    category: 'Social Media App',
+    description: 'Mobile social platform with content sharing, community feeds, and real-time interaction features.',
+    stack: ['React Native', 'Redux', 'WebSocket'],
+    image: imageEdot,
+    url: null,
+  },
+  {
+    id: 15,
+    name: 'BMBK',
+    category: 'Government Web Portal',
+    description: 'Official web portal for a regional government agency, delivering public information and citizen service access.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageBMBK,
+    url: 'https://dinasbmbk.lampungprov.go.id/',
+  },
+  {
+    id: 16,
+    name: 'SIL Tangerang',
+    category: 'Government Web Portal',
+    description: 'City government information system for managing infrastructure data and public service workflows.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageSIL,
+    url: 'https://sil.tangerangkota.go.id/',
+  },
+  {
+    id: 17,
+    name: 'Cipta Karya',
+    category: 'Government Data Platform',
+    description: 'Spatial data management system for a city planning department, supporting GIS integration and public reporting.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageCiptaKarya,
+    url: 'https://dataciptakarya.tangerangkota.go.id/',
+  },
+  {
+    id: 18,
+    name: 'Event Management',
+    category: 'Event Platform',
+    description: 'End-to-end event management web app for scheduling, registration, ticketing, and post-event reporting.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imageEMA,
+    url: null,
+  },
+  {
+    id: 19,
+    name: 'Privilegez',
+    category: 'Loyalty & Rewards Platform',
+    description: 'Membership and loyalty rewards platform with points tracking, merchant offers, and user redemption flows.',
+    stack: ['React.js', 'RESTful APIs'],
+    image: imagePrivilegez,
+    url: null,
+  },
+  {
+    id: 20,
+    name: 'Nex Security',
+    category: 'Security Mobile App',
+    description: 'Mobile security management app for monitoring access control, incident reporting, and guard tracking.',
+    stack: ['React Native', 'RESTful APIs'],
+    image: imageNex,
+    url: null,
+  },
+  {
+    id: 21,
+    name: 'Bearny',
+    category: 'Mobile App',
+    description: 'Consumer mobile application with social features, user profiles, and content discovery built for iOS and Android.',
+    stack: ['React Native', 'Redux', 'RESTful APIs'],
+    image: imageBearny,
     url: null,
   },
 ]
@@ -115,10 +265,12 @@ const PRIMARY_STACK = [
 
 const SUPPORTING_STACK = [
   'Node.js', 'Laravel', 'GraphQL', 'WebSocket', 'Supabase', 'Firebase',
-  'PostgreSQL', 'Git', 'Figma', 'Trello', 'Vercel',
+  'PostgreSQL', 'Git', 'Vercel', 'Figma', 'Trello',
 ]
 
 const Home = ({ onNavigate }) => {
+  const [visibleCount, setVisibleCount] = useState(6)
+
   return (
     <div className="space-y-20 mt-4 md:mt-10">
 
@@ -143,14 +295,14 @@ const Home = ({ onNavigate }) => {
         </div>
         <div className="flex flex-wrap gap-3 mt-8">
           <button
-            onClick={() => onNavigate('Portfolio')}
+            onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
             className="flex items-center gap-2 px-5 py-2.5 bg-[#fcd16b] text-[#121212] text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity cursor-pointer"
           >
             View My Work <FiArrowRight size={14} />
           </button>
           <a
-            href="/cv.pdf"
-            download
+            href={cvFile}
+            download="CV_Taufik_Hidayah.pdf"
             className="flex items-center gap-2 px-5 py-2.5 border border-[#383838] text-[#d6d6d6] text-sm rounded-xl hover:border-[#fcd16b] hover:text-[#fcd16b] transition-colors"
           >
             <FiDownload size={14} /> Download CV
@@ -159,23 +311,14 @@ const Home = ({ onNavigate }) => {
       </section>
 
       {/* ── 2. Selected Work ── */}
-      <section>
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Selected Work</h2>
-            <div className="w-10 h-[5px] rounded-full bg-[#fcd16b] mt-3" />
-          </div>
-          <button
-            onClick={() => onNavigate('Portfolio')}
-            className="flex items-center gap-1.5 text-[#9f9f9f] text-sm hover:text-[#fcd16b] transition-colors group cursor-pointer"
-          >
-            View all
-            <FiArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
-          </button>
+      <section id="work" className="scroll-mt-4 pt-2">
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">Selected Work</h2>
+          <div className="w-10 h-[5px] rounded-full bg-[#fcd16b] mt-3" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {SELECTED_PROJECTS.map((project) => (
+          {SELECTED_PROJECTS.slice(0, visibleCount).map((project) => (
             <div
               key={project.id}
               className="bg-[#222224] rounded-2xl overflow-hidden border border-[#383838] hover:border-[#fcd16b]/30 transition-colors group"
@@ -216,10 +359,21 @@ const Home = ({ onNavigate }) => {
             </div>
           ))}
         </div>
+
+        {visibleCount < SELECTED_PROJECTS.length && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setVisibleCount((c) => c + 4)}
+              className="flex items-center gap-2 px-6 py-2.5 border border-[#383838] text-[#d6d6d6] text-sm rounded-xl hover:border-[#fcd16b] hover:text-[#fcd16b] transition-colors cursor-pointer"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </section>
 
       {/* ── 3. Experience Highlights ── */}
-      <section>
+      <section id="experience" className="scroll-mt-4 pt-2">
         <h2 className="text-2xl md:text-3xl font-bold text-white">Experience</h2>
         <div className="w-10 h-[5px] rounded-full bg-[#fcd16b] mt-3 mb-8" />
         <div className="space-y-4">
@@ -248,7 +402,7 @@ const Home = ({ onNavigate }) => {
       </section>
 
       {/* ── 4. Core Technologies ── */}
-      <section>
+      <section id="technologies" className="scroll-mt-4 pt-2">
         <h2 className="text-2xl md:text-3xl font-bold text-white">Core Technologies</h2>
         <div className="w-10 h-[5px] rounded-full bg-[#fcd16b] mt-3 mb-8" />
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-5">
@@ -275,7 +429,7 @@ const Home = ({ onNavigate }) => {
       </section>
 
       {/* ── 5. Contact CTA ── */}
-      <section className="pb-8">
+      <section id="contact" className="scroll-mt-4 pt-2 pb-8">
         <div className="bg-[#222224] rounded-2xl p-8 md:p-12 border border-[#383838] text-center">
           <p className="text-[#fcd16b] text-[10px] font-semibold tracking-[0.25em] uppercase mb-4">
             Available for new opportunities
@@ -293,12 +447,12 @@ const Home = ({ onNavigate }) => {
             >
               <FiMail size={14} /> Send an Email
             </a>
-            <button
+            {/* <button
               onClick={() => onNavigate('Contact')}
               className="flex items-center gap-2 px-5 py-2.5 border border-[#383838] text-[#d6d6d6] text-sm rounded-xl hover:border-[#fcd16b] hover:text-[#fcd16b] transition-colors cursor-pointer"
             >
               Use Contact Form <FiArrowRight size={13} />
-            </button>
+            </button> */}
           </div>
           <div className="flex justify-center gap-5 mt-6">
             <a

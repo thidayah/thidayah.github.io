@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import imgAvatar from '../assets/avatar.png'
+import cvFile from '../assets/CV_Taufik_Hidayah.pdf'
 import { FiLinkedin, FiMail, FiMapPin, FiBriefcase, FiDownload } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaInstagram, FaGithub } from "react-icons/fa";
@@ -61,8 +62,8 @@ const Sidebar = () => {
           </a> */}
         </div>
         <a
-          href="/cv.pdf"
-          download
+          href={cvFile}
+          download="CV_Taufik_Hidayah.pdf"
           className="flex items-center justify-center gap-2 w-full p-3 rounded-xl border border-[#383838] text-[#fcd16b] text-xs font-medium hover:border-[#fcd16b] hover:bg-[#fcd16b]/5 transition-all"
         >
           <FiDownload size={13} />
