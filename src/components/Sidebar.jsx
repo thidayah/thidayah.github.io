@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import imgAvatar from '../assets/avatar.png'
-import { FiLinkedin, FiMail, FiMapPin, FiUser } from "react-icons/fi";
+import { FiLinkedin, FiMail, FiMapPin, FiBriefcase, FiDownload } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaInstagram, FaGithub } from "react-icons/fa";
 
@@ -13,11 +13,11 @@ const Sidebar = () => {
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
           <div className="flex flex-row space-x-4 items-center">
             <div className=" size-10 lg:size-12 rounded-xl shadow shadow-[#ffdb70] flex justify-center items-center">
-              <FiUser className=" text-[#ffdb70] size-4 lg:size-5" />
+              <FiBriefcase className=" text-[#ffdb70] size-4 lg:size-5" />
             </div>
             <div className="flex flex-col">
-              <div className="text-[#9f9f9f] uppercase text-xs lg:text-sm">Birthday</div>
-              <div className="text-white">September, 4 1996</div>
+              <div className="text-[#9f9f9f] uppercase text-xs lg:text-sm">Experience</div>
+              <div className="text-white">6+ Years</div>
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center">
@@ -26,7 +26,7 @@ const Sidebar = () => {
             </div>
             <div className="flex flex-col">
               <div className="text-[#9f9f9f] uppercase text-xs lg:text-sm">Location</div>
-              <div className="text-white">Indonesia, Cimahi 40522</div>
+              <div className="text-white">Indonesia, Cimahi</div>
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center">
@@ -38,7 +38,7 @@ const Sidebar = () => {
               <a className="text-white hover:cursor-pointer" href="mailto:thidayaaah@gmail.com">thidayaaah@gmail.com</a>
             </div>
           </div>
-          <div className="flex flex-row space-x-4 items-center">
+          {/* <div className="flex flex-row space-x-4 items-center">
             <div className=" size-10 lg:size-12 rounded-xl shadow shadow-[#ffdb70] flex justify-center items-center">
               <FiLinkedin className=" text-[#ffdb70] size-4 lg:size-5" />
             </div>
@@ -46,17 +46,28 @@ const Sidebar = () => {
               <div className="text-[#9f9f9f] uppercase text-xs lg:text-sm">LinkedIn</div>
               <a className="text-white hover:cursor-pointer" target="_blank" href="https://www.linkedin.com/in/thidayah/">@thidayah</a>
             </div>
-          </div>
+          </div> */}
         </div>
         <hr className="border-b-[0.5px] border-[#2b2b2c] w-full lg:hidden " />
         <div className="flex lg:justify-center space-x-4 px-2">
+          <a href="https://www.linkedin.com/in/thidayah" target="_blank">
+            <FiLinkedin className=" text-[#9f9f9f] size-5 hover:opacity-75 duration-200" />
+          </a>
           <a href="https://github.com/thidayah" target="_blank">
             <FaGithub className=" text-[#9f9f9f] size-5 hover:opacity-75 duration-200" />
           </a>
-          <a href="https://instagram.com" target="_blank">
+          {/* <a href="https://instagram.com" target="_blank">
             <FaInstagram className=" text-[#9f9f9f] size-5 hover:opacity-75 duration-200" />
-          </a>
+          </a> */}
         </div>
+        <a
+          href="/cv.pdf"
+          download
+          className="flex items-center justify-center gap-2 w-full p-3 rounded-xl border border-[#383838] text-[#fcd16b] text-xs font-medium hover:border-[#fcd16b] hover:bg-[#fcd16b]/5 transition-all"
+        >
+          <FiDownload size={13} />
+          Download CV
+        </a>
       </>
     )
   }
@@ -70,7 +81,7 @@ const Sidebar = () => {
         <div className=" flex flex-col lg:items-center space-y-3 lg:space-y-4 lg:mt-6 ">
           <div className="text-white text-xl md:text-3xl font-semibold ">Taufik Hidayah</div>
           <div className="flex">
-            <div className=" text-white text-xs md:text-sm bg-[#2b2b2c] p-1 px-4 rounded-lg ">Frontend Developer</div>
+            <div className=" text-white text-xs md:text-sm bg-[#2b2b2c] p-1 px-4 rounded-lg ">Senior Frontend Developer</div>
           </div>
         </div>
         <div

@@ -1,11 +1,9 @@
-import About from "./About";
-import Resume from "./Resume";
-import Portofolio from "./Portofolio";
+import Home from "./Home";
 import Contacts from "./Contacts";
+import Portfolio from "./Portfolio";
 
 export {
-  About,
-  Resume,
-  Portofolio,
-  Contacts
+  Home,
+  Contacts,
+  Portfolio,
 }
