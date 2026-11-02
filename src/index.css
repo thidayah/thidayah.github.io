@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
-:root{
+:root {
   background-color: #121212;
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* :root {
