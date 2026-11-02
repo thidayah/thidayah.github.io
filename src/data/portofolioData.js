@@ -1,4 +1,4 @@
-import cvFile from '../assets/CV_Taufik_Hidayah.pdf'
+import cvFile from '../assets/CV_Taufik_Hidayah_2026.pdf'
 import imagePaseeroWeb from '../assets/PaseeroWeb.webp'
 import imagePaseeroMobile from '../assets/PaseeroMobile.webp'
 import imageKlaklik from '../assets/Klaklik.webp'

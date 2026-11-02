@@ -56,7 +56,7 @@ const Home = ({ onNavigate }) => {
             </button>
             <a
               href={cvFile}
-              download="CV_Taufik_Hidayah.pdf"
+              download="CV_Taufik_Hidayah_2026.pdf"
               className="flex items-center gap-2 px-5 py-2.5 border border-[#383838] text-[#d6d6d6] text-sm rounded-xl hover:border-[#fcd16b] hover:text-[#fcd16b] transition-colors duration-200"
             >
               <FiDownload size={14} /> Download CV
